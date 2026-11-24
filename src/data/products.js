@@ -1,0 +1,223 @@
+const products = [
+  // Electronics
+  {
+    id: 1,
+    name: "Wireless Headphones",
+    price: 1500,
+    originalPrice: 2000,
+    category: "Electronics",
+    image:
+      "https://images.unsplash.com/photo-1546435770-a3e426bf472b?auto=format&fit=crop&w=800&q=80",
+    featured: true,
+    rating: 4.2,
+    reviews: 120,
+    stock: 10,
+    isnew: false,
+  },
+  {
+    id: 2,
+    name: "Smart Watch",
+    price: 2500,
+    category: "Electronics",
+    image:
+      "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=800&q=80",
+    featured: true,
+    rating: 4.7,
+    reviews: 110,
+    stock: 8,
+    isnew: true,
+  },
+  {
+    id: 5,
+    name: "Bluetooth Speaker",
+    price: 1200,
+    category: "Electronics",
+    image:
+      "https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&w=800&q=80",
+    featured: true,
+    rating: 3.2,
+    reviews: 125,
+    stock: 0,
+    isnew: false,
+  },
+  {
+    id: 6,
+    name: "Wireless Mouse",
+    price: 650,
+    originalPrice: 1200,
+    category: "Electronics",
+    image:
+      "https://images.unsplash.com/photo-1527814050087-3793815479db?auto=format&fit=crop&w=800&q=80",
+    featured: false,
+    rating: 4.5,
+    reviews: 80,
+    stock: 3,
+    isnew: false,
+  },
+  {
+    id: 7,
+    name: "Mechanical Keyboard",
+    price: 1800,
+    originalPrice: 2500,
+    category: "Electronics",
+    image:
+      "https://images.unsplash.com/photo-1511467687858-23d96c32e4ae?auto=format&fit=crop&w=800&q=80",
+    featured: false,
+    rating: 4.6,
+    reviews: 105,
+    stock: 8,
+    isnew: true,
+  },
+  {
+    id: 8,
+    name: "USB Flash Drive",
+    price: 400,
+    category: "Electronics",
+    image:
+      "https://images.unsplash.com/photo-1583394838336-acd977736f90?auto=format&fit=crop&w=800&q=80",
+    featured: false,
+    rating: 3.5,
+    reviews: 97,
+    stock: 10,
+    isnew: false,
+  },
+
+  // Fashion
+  {
+    id: 3,
+    name: "Running Shoes",
+    price: 1800,
+    category: "Fashion",
+    image:
+      "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=800&q=80",
+    featured: true,
+    rating: 3.7,
+    reviews: 90,
+    stock: 20,
+    isnew: true,
+  },
+  {
+    id: 9,
+    name: "Casual T-Shirt",
+    price: 750,
+    category: "Fashion",
+    image:
+      "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=800&q=80",
+    featured: false,
+    rating: 3.9,
+    reviews: 128,
+    stock: 5,
+    isnew: false,
+  },
+  {
+    id: 10,
+    name: "Denim Jacket",
+    price: 2200,
+    category: "Fashion",
+    image:
+      "https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=800&q=80",
+    featured: false,
+    rating: 4,
+    reviews: 115,
+    stock: 3,
+    isnew: true,
+  },
+  {
+    id: 11,
+    name: "Sneakers",
+    price: 2000,
+    originalPrice: 3000,
+    category: "Fashion",
+    image:
+      "https://images.unsplash.com/photo-1543508282-6319a3e2621f?auto=format&fit=crop&w=800&q=80",
+    featured: false,
+    rating: 4.3,
+    reviews: 130,
+    stock: 0,
+    isnew: false,
+  },
+
+  // Accessories
+  {
+    id: 4,
+    name: "Backpack",
+    price: 1200,
+    category: "Accessories",
+    image:
+      "https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=800&q=80",
+    featured: true,
+    rating: 3.3,
+    reviews: 86,
+    stock: 12,
+    isnew: true,
+  },
+  {
+    id: 12,
+    name: "Leather Wallet",
+    price: 550,
+    category: "Accessories",
+    image:
+      "https://images.unsplash.com/photo-1627123424574-724758594e93?auto=format&fit=crop&w=800&q=80",
+    featured: false,
+    rating: 4.4,
+    reviews: 113,
+    stock: 11,
+    isnew: false,
+  },
+  {
+    id: 13,
+    name: "Sunglasses",
+    price: 800,
+    category: "Accessories",
+    image:
+      "https://images.unsplash.com/photo-1572635196237-14b3f281503f?auto=format&fit=crop&w=800&q=80",
+    featured: false,
+    rating: 3.5,
+    reviews: 110,
+    stock: 25,
+    isnew: true,
+  },
+  {
+    id: 14,
+    name: "Travel Bag",
+    price: 1600,
+    category: "Accessories",
+    image:
+      "https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?auto=format&fit=crop&w=800&q=80",
+    featured: false,
+    rating: 3.0,
+    reviews: 124,
+    stock: 6,
+    isnew: false,
+  },
+
+  // Home & Living
+  {
+    id: 15,
+    name: "Desk Lamp",
+    price: 950,
+    category: "Home & Living",
+    image:
+      "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=800&q=80",
+    featured: false,
+    rating: 3.9,
+    reviews: 135,
+    stock: 14,
+    isnew: true,
+  },
+  {
+    id: 16,
+    name: "Water Bottle",
+    price: 350,
+    category: "Home & Living",
+    image:
+      "https://images.unsplash.com/photo-1602143407151-7111542de6e8?auto=format&fit=crop&w=800&q=80",
+    featured: false,
+    rating: 4.6,
+    reviews: 145,
+    stock: 20,
+    isnew: false,
+  },
+];
+
+export default products;
